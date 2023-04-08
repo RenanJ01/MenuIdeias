@@ -11,7 +11,7 @@
 
 <body>
     <main>
-    <form action="resultado.php" method="post">
+    <form action="\php/painel.php" method="post">
         <fieldset class="fld_form">
             <h1>Cadastrar</h1><br>
 
