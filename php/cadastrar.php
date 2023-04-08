@@ -29,7 +29,7 @@
             <label for="fidade">Idade:</label><br>
             <input type="number" id="fidade" name="fidade" value="1" min="1" max="200" required><br><br>
 
-            <input class="btn_action" type="submit" value="Enviar"> 
+            <input class="btn_action" type="submit" value="Cadastrar"> 
             <input class="btn_action" type="reset" value="Redefinir"><br>
         </fieldset>
     </form>

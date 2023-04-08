@@ -24,7 +24,7 @@
             <label for="fpass">Senha:</label><br>
             <input type="password" id="fpass" name="fpass" required><br><br>
 
-            <input class="btn_action" type="submit" value="Enviar"> <input class="btn_action" type="reset" value="Redefinir"><br>
+            <input class="btn_action" type="submit" value="Entrar"><br>
         </fieldset>
     </form>
     </main>
