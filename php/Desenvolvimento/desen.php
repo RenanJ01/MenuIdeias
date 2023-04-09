@@ -46,9 +46,11 @@
 
                     <label for="fdata">Data:</label><br>
                     <input type="date" id="fdata" name="fdata" min="2023-01-01"><br><br>
-
-                    <input class="btn_action" type="submit" value="Cadastrar">
-                    <input class="btn_action" type="reset" value="Redefinir"><br>
+                    
+                    <div class="btn_group">
+                        <input class="btn_action" type="submit" value="Cadastrar">
+                        <input class="btn_action" type="reset" value="Redefinir"><br>
+                    </div>
                 </fieldset>
             </form>
         </section>

@@ -1,6 +1,6 @@
 body {
     font-family: 'Times New Roman', Arial, sans-serif, serif;
-    background-color: var(--e-global-color-3);
+    background-color: var(--e-global-color-7);
     margin: 0px;
     padding: 0px;
     border: 0px;
@@ -90,14 +90,19 @@ section  p {
 
 /* Formulario - Cadastrar Fase */
 .fld_form{
-
+    background: linear-gradient(45deg, #ffffff, #000000);
+    border: 1px solid #858585;
+    border-radius: 2em;
 }
 .fld_form h1, .fld_form h2{
-
+    color: var(--e-global-color-5);
+    margin: 5px auto;
 }
 .fld_form label{
-
+    color: var(--e-global-color-5);
+    margin: 3px auto;
 }
+
 .fld_form #ftitle,.fld_form #fdesc,.fld_form #fdata {
     padding: 3px 4px;
     border: 1px solid var(--e-global-color-6);
@@ -111,6 +116,10 @@ section  p {
     min-height: 8em;
 }
 
+.btn_group{
+    text-align-last: justify;
+    margin: 0 7em;
+}
 .btn_action{
     padding: 6px 8px;
     color: var(--e-global-color-5);
