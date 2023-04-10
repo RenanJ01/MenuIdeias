@@ -1,3 +1,8 @@
+<?php
+    include './Assets/conection.php';
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -17,6 +22,9 @@
 
             <label for="fname">Nome:</label><br>
             <input type="text" id="fname" name="fname" required><br><br>
+    
+            <label for="fuser">Nome:</label><br>
+            <input type="text" id="fuser" name="fuser" required><br><br>
 
             <label for="fgenero">Genero:</label><br>
             <input type="radio" id="fgenero" name="fgenero" checked="true" value="Masculino" required><label for="mas">Masculino</label><br>
