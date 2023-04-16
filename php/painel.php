@@ -1,3 +1,7 @@
+<?php
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -50,9 +54,9 @@
                 <h3 class="titleFooter">Menu</h3>
 
                 <ul>
-                <li><a ref="painel.php" title="Painel" target="_self">Painel</a></li>
-                <li><a href="/php/Desenvolvimento/desen.php" title="Desenvolvimento" target="_self">Desenvolvimento</a></li>
-                <li><a href="/php/Perfil/perfil.php" title="Perfil" target="_self">Perfil</a></li>
+                    <li><a ref="painel.php" title="Painel" target="_self">Painel</a></li>
+                    <li><a href="/php/Desenvolvimento/desen.php" title="Desenvolvimento" target="_self">Desenvolvimento</a></li>
+                    <li><a href="/php/Perfil/perfil.php" title="Perfil" target="_self">Perfil</a></li>
                 </ul>
 
             </div>

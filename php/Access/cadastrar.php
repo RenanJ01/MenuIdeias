@@ -1,7 +1,15 @@
 <?php
-    require_once("..\Assets\conection.php");
-    $conc = new PDO("mysql: host=localhost:8080; db=elgames", "clientes", "usuariostigresa1001");
-
+    //Cadastrar
+    require_once("..\\Assets\\conection.php");
+    include_once("..\\Assets\\functions.php");
+    
+    // $conc = new Conexao();
+    // $nameErr = $usernameErr = $senhaErr = $genderErr = $idadeErr = "";
+    // $name = $username = $senha = $gender = $idade = "";
+        
+    //Codigo de redirecionamento
+    //header("Location: .$newURL.php");
+    //die();
 ?>
 
 <!DOCTYPE html>
@@ -17,7 +25,7 @@
 
 <body>
     <main>
-    <form action="\php/painel.php" method="post">
+    <form action="cadastrar.php" method="post">
         <fieldset class="fld_form">
             <h1>Cadastrar</h1><br>
 
