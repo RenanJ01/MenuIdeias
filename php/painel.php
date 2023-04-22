@@ -1,4 +1,15 @@
 <?php
+    require_once("\Assets\conection.php");
+    require_once("\Assets\usuario.php");
+
+    //Verificando se o usuario esta logado
+    $con = new Conexao();
+    $user = new Usuario();
+
+    $vef = $con->Con_Select("Select * From Where username_users='".$fuser."' and senha_users'".$fsenha."';");
+
+
+
 
 ?>
 

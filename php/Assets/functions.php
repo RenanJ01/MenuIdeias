@@ -1,6 +1,17 @@
 <?php
+//Login//
+function Login(){
+    
+}
 
+//Logoff//
+function Logoff(){
+    session_start();
+    session_destroy();
+    header("Location: '..//index.php'"); exit;
+}
 
+//Cadastro//
 
 /*Verificação dos Valores das variaveis*/
 function Verif_var($data)
@@ -66,6 +77,6 @@ function Cadastro($conc)
     $res = $conc->Con_Insert_cadastro($name, $username, $senha, $gender, $idade);
 
     if ($res) {
-        echo "bem Sucedido";
+        return $res = "bem Sucedido";
     }
 }

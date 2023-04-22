@@ -25,7 +25,7 @@
 
 <body>
     <main>
-    <form action="cadastrar.php" method="post">
+    <form action="cadastro.php" method="post">
         <fieldset class="fld_form">
             <h1>Cadastrar</h1><br>
 
