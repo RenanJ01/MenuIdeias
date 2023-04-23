@@ -1,7 +1,7 @@
 <?php
     //Cadastrar
-    require_once("..\\Assets\\conection.php");
-    include_once("..\\Assets\\functions.php");
+    //require_once("..\\Assets\\conection.php");
+    //include_once("..\\Assets\\functions.php");
     
     // $conc = new Conexao();
     // $nameErr = $usernameErr = $senhaErr = $genderErr = $idadeErr = "";

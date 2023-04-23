@@ -3,12 +3,12 @@
     require_once("..\\Assets\\conection.php");
     include_once("..\\Assets\\functions.php");
     
+    VerfLogin();
     $conc = new Conexao();
     $nameErr = $usernameErr = $senhaErr = $genderErr = $idadeErr = "";
     $name = $username = $senha = $gender = $idade = "";
 
     $msg = Cadastro($conc);
-
 ?>
 
 <!DOCTYPE html>
@@ -32,6 +32,11 @@
             //die();
         ?>
     </main>
+    <script>
+        // Redireciona o usuário para a página da DevMedia após cinco segundos
+        setTimeout(function() {
+            window.location.href = "../painel.php";}, 5000);
+    </script>
 </body>
 
 </html>

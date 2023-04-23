@@ -1,4 +1,10 @@
 <?php
+    require_once("..\\Assets\\conection.php");
+    require_once("..\\Assets\\functions.php");
+    require_once("..\\Assets\\usuario.php");
+    
+    //Verificar Login
+    VerfLogin();
 
 ?>
 
@@ -20,9 +26,9 @@
         <!-- Cabeçalho - Barra de Navegação -->
         <nav>
             <ul>
-                <li><a href="\php/painel.php" target="_self">Painel</a></li>
-                <li><a class="active" href="/php/Desenvolvimento/desen.php" target="_self">Desenvolvimento</a></li>
-                <li><a href="\php/Perfil/perfil.php" target="_self">Perfil</a></li>
+                <li><a href="../painel.php" target="_self">Painel</a></li>
+                <li><a class="active" href="../Desenvolvimento/desen.php" target="_self">Desenvolvimento</a></li>
+                <li><a href="../Perfil/perfil.php" target="_self">Perfil</a></li>
             </ul>
         </nav>
     </header>
@@ -38,7 +44,7 @@
         <br><br>
 
         <section>
-            <form action="desen.php" method="post">
+            <form action="fase.php" method="post">
                 <fieldset class="fld_form">
                     <h1>Cadastrar Fase</h1><br>
 
@@ -77,8 +83,8 @@
 
                 <ul>
                     <li><a ref="painel.php" title="Painel" target="_self">Painel</a></li>
-                    <li><a href="/php/Desenvolvimento/desen.php" title="Desenvolvimento" target="_self">Desenvolvimento</a></li>
-                    <li><a href="/php/Perfil/perfil.php" title="Perfil" target="_self">Perfil</a></li>
+                    <li><a href="../Desenvolvimento/desen.php" title="Desenvolvimento" target="_self">Desenvolvimento</a></li>
+                    <li><a href="../Perfil/perfil.php" title="Perfil" target="_self">Perfil</a></li>
                 </ul>
 
             </div>

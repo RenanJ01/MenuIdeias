@@ -1,15 +1,10 @@
 <?php
-    require_once("\Assets\conection.php");
-    require_once("\Assets\usuario.php");
-
-    //Verificando se o usuario esta logado
-    $con = new Conexao();
-    $user = new Usuario();
-
-    $vef = $con->Con_Select("Select * From Where username_users='".$fuser."' and senha_users'".$fsenha."';");
-
-
-
+    require_once("Assets\\conection.php");
+    require_once("Assets\\functions.php");
+    require_once("Assets\\usuario.php");
+    
+    //Verificar Login
+    VerfLogin();
 
 ?>
 
@@ -32,8 +27,9 @@
         <nav>
             <ul>
                 <li><a class="active" href="painel.php" target="_self">Painel</a></li>
-                <li><a href="/php/Desenvolvimento/desen.php" target="_self">Desenvolvimento</a></li>
-                <li><a href="/php/Perfil/perfil.php" target="_self">Perfil</a></li>
+                <li><a href="./Desenvolvimento/desen.php" target="_self">Desenvolvimento</a></li>
+                <li><a href="./Perfil/perfil.php" target="_self">Perfil</a></li>
+                <li><a href="./Access/logoff.php" target="_self">Logoff</a></li>
             </ul>
         </nav>
     </header>
@@ -65,9 +61,9 @@
                 <h3 class="titleFooter">Menu</h3>
 
                 <ul>
-                    <li><a ref="painel.php" title="Painel" target="_self">Painel</a></li>
-                    <li><a href="/php/Desenvolvimento/desen.php" title="Desenvolvimento" target="_self">Desenvolvimento</a></li>
-                    <li><a href="/php/Perfil/perfil.php" title="Perfil" target="_self">Perfil</a></li>
+                    <li><a href="painel.php" title="Painel" target="_self">Painel</a></li>
+                    <li><a href="./Desenvolvimento/desen.php" title="Desenvolvimento" target="_self">Desenvolvimento</a></li>
+                    <li><a href="./Perfil/perfil.php" title="Perfil" target="_self">Perfil</a></li>
                 </ul>
 
             </div>
@@ -80,6 +76,13 @@
         </div>
 
     </footer>
+    <script>
+        function Log_off(){
+            $.ajax({url:"/Access/logoff.php", success:function(result){
+                $("div").text(result);}
+            })
+        } 
+    </script>
 </body>
 
 </html>

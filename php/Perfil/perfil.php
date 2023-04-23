@@ -1,3 +1,12 @@
+<?php
+    require_once("..\\Assets\\conection.php");
+    require_once("..\\Assets\\functions.php");
+    require_once("..\\Assets\\usuario.php");
+    
+    //Verificar Login
+    VerfLogin();
+
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -16,9 +25,9 @@
         <!-- Cabeçalho - Barra de Navegação -->
         <nav>
             <ul>
-                <li><a href="\php/painel.php" target="_self">Painel</a></li>
-                <li><a href="/php/Desenvolvimento/desen.php" target="_self">Desenvolvimento</a></li>
-                <li><a class="active" href="\php/Perfil/perfil.php" target="_self">Perfil</a></li>
+                <li><a href="..\painel.php" target="_self">Painel</a></li>
+                <li><a href="..\Desenvolvimento/desen.php" target="_self">Desenvolvimento</a></li>
+                <li><a class="active" href="..\Perfil/perfil.php" target="_self">Perfil</a></li>
             </ul>
         </nav>
     </header>
@@ -37,14 +46,12 @@
             <img src="" alt="">
         </figure>
         <section class="scn_pfl">
-            <h1>Nome:</h1>
-            <p></p>
-            <h1>Username:</h1>
-            <p></p>
-            <h1>Gênero:</h1>
-            <p></p>
-            <h1>Idade:</h1>
-            <p></p>
+            <?php
+                echo "<h1>Nome:</h1>".$_SESSION["Usuario"]->nome."
+                <h1>Username:</h1>".$_SESSION["Usuario"]->username."
+                <h1>Gênero:</h1>".$_SESSION["Usuario"]->genero."
+                <h1>Idade:</h1>".$_SESSION["Usuario"]->idade;
+            ?>
         </section>
 
         <br><br>

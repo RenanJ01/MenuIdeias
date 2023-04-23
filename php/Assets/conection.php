@@ -21,8 +21,9 @@ class Conexao
         try {
             $con = $this->Con_AbrirConection();
             $res = $con->prepare($query);
+            $res->execute();
             if ($res) {
-                $res->setFetchMode(PDO::FETCH_COLUMN, 0);
+                $res->setFetchMode(PDO::FETCH_ASSOC);
                 $tab = $res->fetchAll();
                 return $tab;
             } else {
@@ -41,6 +42,25 @@ class Conexao
             $res->bindValue("nome", $name);
             $res->bindValue("username", $username);
             $res->bindValue("senha", $senha);
+            $res->execute();
+            if ($res) {
+                return true;
+            } else {
+                return false;
+            }
+        } catch (Exception $e) {
+            echo "Ocorreu o erro:" . $e->getMessage();
+        }
+    }
+
+    public function Con_Insert_Fase($title, $desc, $data)
+    {
+        try {
+            $con = $this->Con_AbrirConection();
+            $res = $con->prepare("INSERT INTO tb_fases(title_fases, username_users, senha_users) VALUES(:nome, :username, :senha)");
+            $res->bindValue("title", $title);
+            $res->bindValue("desc", $desc);
+            $res->bindValue("data", $data);
             $res->execute();
             if ($res) {
                 return true;
