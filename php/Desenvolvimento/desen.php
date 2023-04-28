@@ -42,12 +42,10 @@ VerfLogin();
         </section>
 
         <br>
-
         <h3 class="submenu" id="h3_fases" onclick="ShowAba();">Cadastrar Fase</h3>
-
         <br>
 
-        <section id="scn_fases">
+        <section id="scn_fases" class="hide">
             <form action="fase.php" method="post">
                 <fieldset class="fld_form">
                     <h1>Cadastrar Fase</h1><br>
@@ -69,8 +67,27 @@ VerfLogin();
             </form>
         </section>
 
-        <section id="scn_dados">
+        <br>
+        <h3 class="submenu" id="h3_dados" onclick="ShowAba2();">Visualizar Fases</h3>
+        <br>
 
+        <section id="scn_dados" class="hide">
+            <table>
+                <tr>
+                    <th>N° da Fase</th>
+                    <th>Titulo</th>
+                    <th>Descrição</th>
+                    <th>Data</th>
+                    <th>Funções</th>
+                </tr>
+                <?php
+                    $con = new Conexao();
+
+                    $con->Con_Select("Select * From tb_fases");
+                    
+
+                ?>
+            </table>
         </section>
 
         <br><br>
@@ -106,14 +123,24 @@ VerfLogin();
         function ShowAba() {
             var aba = document.getElementById("scn_fases");
             
-            var dpy = window.getComputedStyle(aba).display;
-            if (dpy == "none") {
-                aba.style.display = "block";
+            var dpy = aba.classList.contains("hide");
+            if (dpy) {
+                aba.classList.remove("hide");
             } else {
-                aba.style.display = "none";
+                aba.classList.add("hide");
             }
         }
 
+        function ShowAba2() {
+            var aba = document.getElementById("scn_dados");
+            
+            var dpy = aba.classList.contains("hide");
+            if (dpy) {
+                aba.classList.remove("hide");
+            } else {
+                aba.classList.add("hide");
+            }
+        }
     </script>
 </body>
 

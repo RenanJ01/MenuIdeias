@@ -67,7 +67,6 @@ header nav ul li a:hover:not(.active):not(.logoA){
     font-size: xx-large;
     font-weight: bold;
     margin: 5px auto;
-
     border-bottom: 4px solid var(--e-global-color-6);
     width: 60%;
 }
@@ -100,17 +99,37 @@ section  p {
     background: linear-gradient(181deg, #bdbdbd, #bdbdbd, var(--e-global-color-1));
     margin-left: 10px;
     padding: 2px 10px;
+    cursor: pointer;
 }
 
 section#scn_fases{
-    display: none;
+    overflow: hidden;
+    max-height: 701px;
+    transition: max-height 1s ease-in-out;
+}  
+section#scn_fases.hide {
+    max-height: 0;
+    pointer-events: none;
+    /* transition: max-height 1s ease-in-out; */
 }
+
+section#scn_dados{
+    overflow: hidden;
+    max-height: 701px;
+    transition: max-height 1s ease-in-out;
+} 
+section#scn_dados.hide {
+    max-height: 0;
+    pointer-events: none;
+    /* transition: max-height 1s ease-in-out; */
+}
+
 
 /* Formulario - Cadastrar Fase */
 .fld_form{
     background: linear-gradient(45deg, #ffffff, #000000);
     border: 1px solid #858585;
-    border-radius: 2em;
+    border-radius: 1em;
 }
 .fld_form h1, .fld_form h2{
     color: var(--e-global-color-5);
@@ -153,6 +172,29 @@ section#scn_fases{
     background-color: var(--e-global-color-6);
     color: var(--e-global-color-7);
 }
+
+/* Section Dados */
+#scn_dados table {
+    width: 85%;
+    column-width: auto;
+    text-align: center;
+    margin-left: 10px;
+}
+
+#scn_dados th {
+    background-color: #bdbdbd;
+}
+#scn_dados td {
+    background-color: #cdcdcdde;
+}
+#scn_dados table,
+#scn_dados th,
+#scn_dados td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+
 
 /* Rodapé */
 footer {
