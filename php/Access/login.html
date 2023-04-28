@@ -6,13 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="login.css" />
+    <link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
+    <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     <title>Login</title>
 </head>
 
 <body>
 
     <!-- Principal - Formulario -->
-    <main>
+    <!-- <main>
     <form action="logando.php" method="post">
         <fieldset class="fld_form">
 
@@ -27,12 +30,40 @@
             <input class="btn_action" type="submit" value="Entrar"><br>
         </fieldset>
     </form>
-    </main>
+    </main> -->
 
-    <!-- Rodapé -->
-    <footer>
+    <div class="limiter">
+        <div class="ctn-login">
+            <div class="wrap-login">
+                <form class="login-form" action="logando.php" method="post">
+                    <span class="login-form-logo">
+                        <i class="">Imagem</i>
+                    </span>
+                    <br/>
+                    <span class="login-form-title">
+                        Entrar
+                    </span>
+                    <br>
+                    <div class="wrap-input validate-input" data-validate="Entre username">
+                        <input class="input" type="text" id="fuser" name="fuser" placeholder="Nome do Usuario" required>
+                        <span class="focus-input" data-placeholder="&#xf207;"></span>
+                    </div>
+                    <div class="wrap-input validate-input" data-validate="Entre password">
+                        <input class="input" type="password" id="fpass" name="fpass" placeholder="Senha" required>
+                        <span class="focus-input" data-placeholder="&#xf023;" aria-hidden="true">
+                        </span>
+                    </div>
+                    <br/>
+                    <div class="ctn-login-form-btn">
+                        <button class="login-form-btn">
+                            Login
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 
-    </footer>
 </body>
 
 </html>
