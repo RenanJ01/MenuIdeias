@@ -83,8 +83,17 @@ VerfLogin();
                 <?php
                     $con = new Conexao();
 
-                    $con->Con_Select("Select * From tb_fases");
+                    $res = $con->Con_Select("Select * From tb_fases");
                     
+                    foreach ($res as $row => $item) {
+                        echo '<tr>';
+                        echo '<td> '. $item['id_fases'] .'</td>';
+                        echo '<td> '. $item['title_fases'] .'</td>';
+                        echo '<td> '. $item['desc_fases'] .'</td>';
+                        echo '<td> '. $item['data_fases'] .'</td>';
+                        echo '<td> ferramentas </td>';
+                        echo '</tr>';
+                    }
 
                 ?>
             </table>
