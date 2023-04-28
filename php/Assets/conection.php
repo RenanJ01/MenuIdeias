@@ -57,7 +57,7 @@ class Conexao
     {
         try {
             $con = $this->Con_AbrirConection();
-            $res = $con->prepare("INSERT INTO tb_fases(title_fases, username_users, senha_users) VALUES(:nome, :username, :senha)");
+            $res = $con->prepare("INSERT INTO tb_fases(title_fases, desc_fases, data_fases) VALUES(:title, :desc, :data);");
             $res->bindValue("title", $title);
             $res->bindValue("desc", $desc);
             $res->bindValue("data", $data);

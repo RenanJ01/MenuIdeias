@@ -3,6 +3,8 @@ require_once("..\\Assets\\conection.php");
 require_once("..\\Assets\\functions.php");
 require_once("..\\Assets\\usuario.php");
 
+$con = new Conexao();
+
 // Verifica se houve POST e se foi inserido as variaveis
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (empty($_POST["ftitle"])) {
@@ -31,7 +33,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 //Inserção da fase
 $verf = $con->Con_Insert_Fase($title, $descr, $data);
 if ($verf) {
-    
+    header("Location: desen.php");
+    exit;
 } else {
     //Mensagem de erro quando os dados são inválidos e/ou o usuário não foi encontrado.
     echo "Inserção inválidada!";

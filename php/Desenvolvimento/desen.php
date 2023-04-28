@@ -1,10 +1,10 @@
 <?php
-    require_once("..\\Assets\\conection.php");
-    require_once("..\\Assets\\functions.php");
-    require_once("..\\Assets\\usuario.php");
-    
-    //Verificar Login
-    VerfLogin();
+require_once("..\\Assets\\conection.php");
+require_once("..\\Assets\\functions.php");
+require_once("..\\Assets\\usuario.php");
+
+//Verificar Login
+VerfLogin();
 
 ?>
 
@@ -41,9 +41,13 @@
             <h1>Desenvolvimento</h1>
         </section>
 
-        <br><br>
+        <br>
 
-        <section>
+        <h3 class="submenu" id="h3_fases" onclick="ShowAba();">Cadastrar Fase</h3>
+
+        <br>
+
+        <section id="scn_fases">
             <form action="fase.php" method="post">
                 <fieldset class="fld_form">
                     <h1>Cadastrar Fase</h1><br>
@@ -56,7 +60,7 @@
 
                     <label for="fdata">Data:</label><br>
                     <input type="date" id="fdata" name="fdata" min="2023-01-01"><br><br>
-                    
+
                     <div class="btn_group">
                         <input class="btn_action" type="submit" value="Cadastrar">
                         <input class="btn_action" type="reset" value="Redefinir"><br>
@@ -65,8 +69,8 @@
             </form>
         </section>
 
-        <section class="scn_dados">
-            
+        <section id="scn_dados">
+
         </section>
 
         <br><br>
@@ -98,6 +102,19 @@
 
     </footer>
 
+    <script>
+        function ShowAba() {
+            var aba = document.getElementById("scn_fases");
+            
+            var dpy = window.getComputedStyle(aba).display;
+            if (dpy == "none") {
+                aba.style.display = "block";
+            } else {
+                aba.style.display = "none";
+            }
+        }
+
+    </script>
 </body>
 
 </html>
