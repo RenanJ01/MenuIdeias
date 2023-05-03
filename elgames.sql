@@ -67,9 +67,7 @@ CREATE TABLE IF NOT EXISTS `tb_usuarios` (
 
 INSERT INTO `tb_usuarios` (`id_users`, `nome_users`, `username_users`, `senha_users`, `genero_users`, `idade_users`) VALUES
 (1, 'Gabriel', 'Gab', 'Gab0123', 'O', 1),
-(2, 'Jonatas', 'renanj', '123', 'M', 18),
-(3, 'Wes', 'wes', 'weslley', 'M', 11),
-(4, 'Wes', 'solgaleio', '123', 'M', 11);
+(2, 'Jonatas', 'renanj', '123', 'M', 18);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
